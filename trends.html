@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBridge - Trends</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #141414;
+            color: #fff;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #000000;
+        }
+        .logo {
+            color: #4dbf00;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input {
+            padding: 8px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            margin-right: 10px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .nav-links a.active {
+            font-weight: bold;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .profile img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+        .toggle {
+            width: 40px;
+            height: 20px;
+            background-color: #4dbf00;
+            border-radius: 10px;
+            position: relative;
+            cursor: pointer;
+        }
+        .toggle-ball {
+            width: 18px;
+            height: 18px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            right: 1px;
+            top: 1px;
+            transition: transform 0.3s ease;
+        }
+        .featured-content {
+            height: 60vh;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.6), #141414), url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/squid-game-banner-Hy5Ue9Ue5Ue9Ue5Ue9Ue5Ue9Ue5Ue9.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .featured-title {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .featured-desc {
+            font-size: 18px;
+            max-width: 500px;
+            margin-bottom: 20px;
+        }
+        .watch-btn {
+            background-color: #4dbf00;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .watch-btn:hover {
+            background-color: #45a700;
+        }
+        .content-list {
+            padding: 20px 50px;
+        }
+        .content-list h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .content-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .content-card:hover {
+            transform: scale(1.05);
+        }
+        .content-card img {
+            width: 100%;
+            height: auto;
+        }
+        .content-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        .content-card:hover .content-info {
+            transform: translateY(0);
+        }
+        .content-title {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .content-year {
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">TechBridge</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search Trends">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="nav-links">
+            <li class="menu-list-item active"><a href="index.html">Home</a></li>
+                    <li class="menu-list-item"><a href="movies.html">Movies</a></li>
+                    <li class="menu-list-item"><a href="series.html">Series</a></li>
+                    <li class="menu-list-item"><a href="popular.html">Popular</a></li>
+                    <li class="menu-list-item"><a href="trends.html">Trends</a></li>
+        </div>
+        <div class="profile">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/profile-pic-Hy5Ue9Ue5Ue9Ue5Ue9Ue5Ue9Ue5Ue9.jpg" alt="Profile">
+            <span>Profile</span>
+            <div class="toggle">
+                <div class="toggle-ball"></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="featured-content">
+        <h1 class="featured-title">Squid Game</h1>
+        <p class="featured-desc">Hundreds of cash-strapped players accept a strange invitation to compete in children's games. Inside, a tempting prize awaits — with deadly high stakes.</p>
+        <button class="watch-btn">WATCH NOW</button>
+    </div>
+
+    <section class="content-list">
+        <h2>TRENDING NOW</h2>
+        <div class="content-grid">
+            <div class="content-card">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/wednesday-poster-Hy5Ue9Ue5Ue9Ue5Ue9Ue5Ue9Ue5Ue9.jpg" alt="Wednesday">
+                <div class="content-info">
+                    <h3 class="content-title">Wednesday</h3>
+                    <p class="content-year">2022</p>
+                </div>
+            </div>
+            <div class="content-card">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/the-last-of-us-poster-Hy5Ue9Ue5Ue9Ue5Ue9Ue5Ue9Ue5Ue9.jpg" alt="The Last of Us">
+                <div class="content-info">
+                    <h3 class="content-title">The Last of Us</h3>
+                    <p class="content-year">2023</p>
+                </div>
+            </div>
+            <div class="content-card">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bridgerton-poster-Hy5Ue9Ue5Ue9Ue5Ue9Ue5Ue9Ue5Ue9.jpg" alt="Bridgerton">
+                <div class="content-info">
+                    <h3 class="content-title">Bridgerton</h3>
+                    <p class="content-year">2020-Present</p>
+                </div>
+            </div>
+            <div class="content-card">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/the-witcher-poster-Hy5Ue9Ue5Ue9Ue5Ue9Ue5Ue9Ue5Ue9.jpg" alt="The Witcher">
+                <div class="content-info">
+                    <h3 class="content-title">The Witcher</h3>
+                    <p class="content-year">2019-Present</p>
+                </div>
+            </div>
+            <div class="content-card">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/queen-gambit-poster-Hy5Ue9Ue5Ue9Ue5Ue9Ue5Ue9Ue5Ue9.jpg" alt="The Queen's Gambit">
+                <div class="content-info">
+                    <h3 class="content-title">The Queen's Gambit</h3>
+                    <p class="content-year">2020</p>
+                </div>
